@@ -3,7 +3,8 @@ import Header from './Components/Header'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css'
-import Login from './Components/Authentication/Main';
+import Login from './Components/Authentication/Main'
+import Products from './Components/Products/Products'
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             Welcome User
+          </Route>
+          <Route path='/products'>
+            <Products />
           </Route>
           <Route exact path="/login">
             <Login />
