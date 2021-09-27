@@ -15,7 +15,7 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/">
-              Welcome User
+              Welcome
             </Route>
             <Route path='/products'>
               <Products />

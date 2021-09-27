@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { useAuth } from '../../../Contexts/AuthContext';
 
 const SignUp = () => {
-   const { signup, currentUser } = useAuth()
+   const { signup } = useAuth()
    const fullNameRef = useRef()
    const emailRef = useRef()
    const passwordRef = useRef()

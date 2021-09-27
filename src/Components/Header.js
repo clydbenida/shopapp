@@ -2,7 +2,11 @@ import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+import { useAuth } from '../Contexts/AuthContext'
+
 const Header = () => {
+   const { currentUser, logout } = useAuth()
+
    return (
       <Navbar>
          <Container>
@@ -12,7 +16,11 @@ const Header = () => {
                <Nav className=''>
                   <Link className='nav-link' to="/">Home</Link>
                   <Link className='nav-link' to="/products">Products</Link>
-                  <Link className='nav-link' to="/login">Login</Link>
+                  {currentUser ? (
+                     <Link to='#' className='nav-link' onClick={() => logout()}>Logout</Link>
+                  ) : (
+                     <Link className='nav-link' to="/login">Login</Link>
+                  )}
                </Nav>
             </Navbar.Collapse>
          </Container>
