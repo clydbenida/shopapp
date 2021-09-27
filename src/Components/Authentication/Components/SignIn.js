@@ -6,15 +6,15 @@ const Login = () => {
          <h1>Sign In</h1>
          <form>
             <div className='mb-3'>
-               <label for='email'>Email</label>
+               <label htmlFor='email'>Email</label>
                <input className='form-control' id='email' type='text' />
             </div>
 
             <div>
-               <label for='password'>Password</label>
+               <label htmlFor='password'>Password</label>
                <input className='form-control' id='password' type='password' />
             </div>
-            <button className='btn btn-primary'>Sign In</button>
+            <button className='btn btn-primary mt-3'>Sign In</button>
          </form>
       </>
    );
